@@ -1,0 +1,160 @@
+.questions {
+
+    &Top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 85px;
+
+        @media (max-width: 980px) {
+            margin-bottom: 49px;
+        }
+
+        &Theme {
+            display: flex;
+            align-items: center;
+
+            &Icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #F6E7FF;
+            }
+
+            &Title {
+                margin-left: 24px;
+                color: $darkNavy;
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 100%;
+            }
+        }
+    }
+
+    &Content {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 980px) {
+            flex-direction: column;
+        }
+
+        &Text {
+
+            &Number {
+                color: $greyNavy;
+                font-style: italic;
+                font-size: 20px;
+                line-height: 150%;
+                font-weight: 300;
+            }
+
+            &Question {
+                margin: 27px 0 164px 0;
+                color: $darkNavy;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 120%;
+                width: 465px;
+
+                @media (max-width: 1350px) {
+                    width: 400px;
+                }
+
+                @media (max-width: 980px) {
+                    margin-bottom: 40px;
+                    width: 100%;
+                }
+            }
+
+            &ProgressBar {
+                content: "";
+                width: 465px;
+                height: 16px;
+                border-radius: 15px;
+                background-color: $white;
+                position: relative;
+
+                @media (max-width: 980px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &Form {
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 980px) {
+                margin-top: 64px;
+            }
+
+            &Answer {
+                display: flex;
+                align-items: center;
+                background-color: $white;
+                border-radius: 24px;
+                filter: drop-shadow(0px 16px 40px rgba(143, 160, 193, 14%));
+                cursor: pointer;
+                padding: 18px 20px;
+                margin-bottom: 24px;
+                color: $darkNavy;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 100%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &Span {
+                    display: block;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 8px;
+                    background-color: $lightGrey;
+                    font-size: 28px;
+                    line-height: 100%;
+                    font-weight: 500;
+                    color: $greyNavy;
+                    text-align: center;
+                    padding-top: 16px;
+                    margin-right: 32px;
+                }
+
+                &:hover .questionsContentFormAnswerSpan {
+                    background-color: #F6E7FF;
+                    color: $purple;
+                }
+
+                &.select {
+                    border: 3px solid $purple;
+
+                    & .questionsContentFormAnswerSpan {
+                        background-color: $purple;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.progressBarSpan {
+    content: "";
+    background-color: $purple;
+    height: 8px;
+    width: 300px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+}
+
+input[type="radio"] {
+    appearance: none;
+}

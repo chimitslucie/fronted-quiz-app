@@ -1,0 +1,13 @@
+.btnTheme {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &Content {
+        width: 48px;
+        height: 28px;
+        background-color: $purple;
+        border-radius: 15px;
+        margin: 0 16px;
+    }
+}

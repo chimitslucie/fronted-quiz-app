@@ -1,0 +1,141 @@
+.quiz {
+
+    &Content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 99px;
+
+        @media (max-width: 980px) {
+            flex-direction: column;
+            margin-top: 56px;
+        }
+    }
+
+    &ContentParagraph {
+        width: 452px;
+
+
+        @media (max-width: 560px) {
+            width: 100%;
+        }
+
+        &Title {
+            color: $darkNavy;
+            font-size: 64px;
+            font-weight: 300;
+            line-height: 100%;
+
+            @media (max-width: 560px) {
+                font-size: 40px;
+            }
+
+            &Span {
+                font-weight: 500;
+            }
+        }
+
+        &Text {
+            color: $greyNavy;
+            font-size: 20px;
+            line-height: 150%;
+            font-style: italic;
+            margin-top: 48px;
+
+            @media (max-width: 980px) {
+                margin-top: 16px;
+            }
+
+            @media (max-width: 560px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &Choise {
+
+        @media (max-width: 980px) {
+            margin-top: 64px;
+        }
+
+
+        @media (max-width: 560px) {
+            margin-top: 40px;
+        }
+
+        &Content {
+            display: flex;
+            align-items: center;
+            width: 564px;
+            height: 96px;
+            border-radius: 24px;
+            background-color: $white;
+            margin-bottom: 24px;
+            filter: drop-shadow(0px 16px 40px rgb(143, 160, 193, 14%));
+            padding: 20px 20px;
+
+            @media (max-width: 980px) {
+                width: 100%;
+                height: 80px;
+            }
+
+
+            @media (max-width: 560px) {
+                height: 64px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &Icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 32px;
+
+
+                @media (max-width: 560px) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &Title {
+                color: $darkNavy;
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 100%;
+
+                @media (max-width: 560px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &Icon {
+            @media (max-width: 560px) {
+                width: 29px;
+            }
+        }
+    }
+}
+
+.color-0 {
+    background-color: #FFF1E9;
+}
+
+.color-1 {
+    background-color: #E0FDEF;
+}
+
+.color-2 {
+    background-color: #EBF0FF;
+}
+
+.color-3 {
+    background-color: #F6E7FF;
+}
